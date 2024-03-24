@@ -59,7 +59,7 @@ export class RestaurentDashComponent implements OnInit {
   }
 
   getAllData(){
-    this.allRestaurentData =[{
+    this.allRestaurentData =[{ //mock data
       id:'01',
       name:'ABC',
       email:'abc.abc@rest.com',
