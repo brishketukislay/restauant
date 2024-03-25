@@ -114,7 +114,7 @@ export class RestaurentDashComponent implements OnInit {
       let ref= document.getElementById('close');
       ref?.click();
 
-      this.getAllData();
+      this.getAllData(); // get data
 
     })
 
