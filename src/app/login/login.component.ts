@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  loginForm!: FormGroup;
+  loginForm!: FormGroup; // form group
   constructor(private formbuilder: FormBuilder, private _http:HttpClient, private _router:Router ) { }
 
   ngOnInit(): void {
@@ -20,24 +20,25 @@ export class LoginComponent implements OnInit {
   }
 
   logIn() {
-    //console.log(this.loginForm.value);
-    this._http.get<any>('http://localhost:3000/signup').subscribe(
-      (res) => {
-        const user= res.find((a:any)=>{
-          return a.email === this.loginForm.value.email && a.password === this.loginForm.value.password;
-        });
-         if (user) {
-          alert(user.name + ' logged in successfully');
-          this._router.navigate(['/restaurent']);
-          this.loginForm.reset();
-         } else {
-          alert("Invalid credentials");
-         }
-        }, err=>{
-          console.log(err);
-        })
-      }
-    
+    this._router.navigate(['/restaurent']);
+    console.log(this.loginForm.value);
+    // this._http.get<any>('http://localhost:3000/signup').subscribe(
+    //   (res) => {
+    //     const user= res.find((a:any)=>{
+    //       return a.email === this.loginForm.value.email && a.password === this.loginForm.value.password;
+    //     });
+    //      if (user) {
+    //       alert(user.name + ' logged in successfully');
+    //       this._router.navigate(['/restaurent']);
+    //       this.loginForm.reset();
+    //      } else {
+    //       alert("Invalid credentials");
+    //      }
+    //     }, err=>{
+    //       console.log(err);
+    //     })
+       }
+
   }
 
 

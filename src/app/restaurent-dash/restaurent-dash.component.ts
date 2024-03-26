@@ -34,7 +34,7 @@ export class RestaurentDashComponent implements OnInit {
     this.showAdd = true;
     this.showBtn = false;
   }
- 
+
   addRestaurent(){
     this.restaurentModelObj.name = this.formValue.value.name;
     this.restaurentModelObj.email = this.formValue.value.email;
@@ -59,11 +59,24 @@ export class RestaurentDashComponent implements OnInit {
   }
 
   getAllData(){
-    this.api.getRestaurent().subscribe(res => {
-      this.allRestaurentData= res;
-    }, err=>{
-      console.log(err);
-    })
+    this.allRestaurentData =[{ //mock data
+      id:'01',
+      name:'ABC',
+      email:'abc.abc@rest.com',
+      address:'74,Somewhere',
+      mobile:'1299999999',
+      services:'NA'
+    },{id:'02',
+    name:'BCD',
+    email:'bcd.abc@rest.com',
+    address:'76,Somewhere',
+    mobile:'1199999999',
+    services:'NA'}]
+    // this.api.getRestaurent().subscribe(res => {
+    //   this.allRestaurentData= res;
+    // }, err=>{
+    //   console.log(err);
+    // })
   }
 
   deleteResto(data: any){
@@ -77,7 +90,7 @@ export class RestaurentDashComponent implements OnInit {
   onEditResto(data: any){
     this.showAdd = false;
     this.showBtn = true;
-    
+
     this.restaurentModelObj.id = data.id;
     this.formValue.controls['name'].setValue(data.name);
     this.formValue.controls['email'].setValue(data.email);
@@ -85,7 +98,7 @@ export class RestaurentDashComponent implements OnInit {
     this.formValue.controls['address'].setValue(data.address);
     this.formValue.controls['services'].setValue(data.services);
 
- 
+
   }
   updateResto(){
     this.restaurentModelObj.name = this.formValue.value.name;
@@ -95,7 +108,7 @@ export class RestaurentDashComponent implements OnInit {
     this.restaurentModelObj.services = this.formValue.value.services;
 
     this.api.updateRestaurant(this.restaurentModelObj.id,this.restaurentModelObj).subscribe((res: any) => {
-      alert("Restaurent Updated Successfully");
+      alert("Restaurent Updated Successfully"); //alert
       this.formValue.reset();
 
       let ref= document.getElementById('close');
@@ -104,8 +117,8 @@ export class RestaurentDashComponent implements OnInit {
       this.getAllData();
 
     })
-    
+
   }
 
-  
+
 }
