@@ -108,13 +108,13 @@ export class RestaurentDashComponent implements OnInit {
     this.restaurentModelObj.services = this.formValue.value.services;
 
     this.api.updateRestaurant(this.restaurentModelObj.id,this.restaurentModelObj).subscribe((res: any) => {
-      alert("Restaurent Updated Successfully");
+      alert("Restaurent Updated Successfully"); //alert
       this.formValue.reset();
 
       let ref= document.getElementById('close');
       ref?.click();
 
-      this.getAllData(); // get data
+      this.getAllData();
 
     })
 

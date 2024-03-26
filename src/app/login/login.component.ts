@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
 
   logIn() {
     this._router.navigate(['/restaurent']);
-    //console.log(this.loginForm.value);
+    console.log(this.loginForm.value);
     // this._http.get<any>('http://localhost:3000/signup').subscribe(
     //   (res) => {
     //     const user= res.find((a:any)=>{
