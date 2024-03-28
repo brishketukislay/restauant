@@ -21,16 +21,21 @@ export class SignupComponent implements OnInit {
     })
   }
 
-  signUp(){
-    this._http.post<any>('http://localhost:3000/signup',this.signupForm.value).subscribe(res=>{
-      console.log(res)
-      alert('Signup Successfully');
-      this.signupForm.reset();
-      this._router.navigate(['/login']);
-    }), (err: any)=>{
-      console.log(err);
-      alert('Signup Error');
-    }
+  // signUp(){
+  //   this._http.post<any>('http://localhost:3000/signup',this.signupForm.value).subscribe(res=>{
+  //     console.log(res)
+  //     alert('Signup Successfully');
+  //     this.signupForm.reset();
+  //     this._router.navigate(['/login']);
+  //   }), (err: any)=>{
+  //     console.log(err);
+  //     alert('Signup Error');
+  //   }
+  // }
+  signUP(){
+    alert('Signup Successfull');
+    this.signupForm.reset();
+    this._router.navigate(['/login']);
   }
 
 }
