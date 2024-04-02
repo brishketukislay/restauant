@@ -2,10 +2,9 @@
     position: relative;
     left: 50%;
     margin-top: 5%;
-    border: 1px solid #ccc;
+    border: 1px solid #c9c6c6;
     border-radius: 5px;
     padding: 55px;
-    background-color: #fff;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
-
+    background-color: #eceaea;
+    box-shadow: 0px 0px 5px rgba(14, 13, 13, 0.377);
 }
