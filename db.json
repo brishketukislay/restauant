@@ -15,6 +15,14 @@
       "email": "selection@abc.com",
       "services": "chai",
       "mobile": 78941252511
+    },
+    {
+      "id": 3,
+      "name": "new taste",
+      "address": "GOBINDAPUR , KAILASHAHAR , UNAKOTI TRIPURA",
+      "email": "newtaste@abc.com",
+      "services": "food",
+      "mobile": 78941252511
     }
   ],
   "signup": [
