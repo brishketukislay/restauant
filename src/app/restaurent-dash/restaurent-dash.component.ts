@@ -78,7 +78,13 @@ export class RestaurentDashComponent implements OnInit {
     //   console.log(err);
     // })
   }
-
+  sortData(restData:any){
+    restData.sort((a: { name: string; },b: { name: string; })=>{
+      if(a.name>b.name){
+        return 1;
+      }
+    })
+  }
   deleteResto(data: any){
     this.api.deleteRestaurant(data).subscribe((res: any) => {
       console.log(res);
