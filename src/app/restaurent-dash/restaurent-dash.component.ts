@@ -82,7 +82,7 @@ export class RestaurentDashComponent implements OnInit {
     if(!restData){
       restData= this.allRestaurentData;
     }
-    restData.sort((a: { name: string; },b: { name: string; })=>{
+    restData.sort((a:any ,b:any)=>{
       if(a.name>b.name){
         return 1;
       }
