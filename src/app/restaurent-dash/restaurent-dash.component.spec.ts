@@ -22,4 +22,8 @@ describe('RestaurentDashComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should call', () => {
+    SVGPolygonElement()
+    expect(component).toBeTruthy();
+  });
 });
