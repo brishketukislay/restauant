@@ -23,7 +23,7 @@ describe('RestaurentDashComponent', () => {
     expect(component).toBeTruthy();
   });
   it('should call', () => {
-    SVGPolygonElement()
+    component.addRestaurent();
     expect(component).toBeTruthy();
   });
 });
