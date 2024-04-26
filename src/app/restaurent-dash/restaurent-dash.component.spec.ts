@@ -22,4 +22,9 @@ describe('RestaurentDashComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should call', () => {
+    spyOn(component,'addRestaurent').and.callThrough();
+    component.addRestaurent();
+    expect(component).toBeTruthy();
+  });
 });

@@ -31,7 +31,7 @@ export class ApiService {
       return res;
     }));
   }
-  //update request
+  //update request for local use
   updateRestaurant(id: number, data: any) {
     return this._http.put<any>("http://localhost:3000/posts/"+id,data).pipe(map((res:any)=>{
       return res;
